@@ -2,7 +2,7 @@
 
 **Weekend, hackaton project. Use at your own risk. No test coverage.**
 
-**Developed during the [Open Data Day 2016](http://opendataday.org), in João Pessoa, Brazil**
+**Developed during the [Open Data Day 2016](http://opendataday.org), in João Pessoa, Brazil. The data collected by this scraper powers the website http://fernandobrito.github.io/cmjp_parser.**
 
 Scraper and parser for João Pessoas's City Council (Câmara Municipal de João Pessoa).
 

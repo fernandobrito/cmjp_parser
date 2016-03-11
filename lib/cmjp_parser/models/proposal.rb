@@ -37,7 +37,7 @@ module CmjpParser
         decreto_legislativo: /DECRETO LEGISLATIVO/,
         emenda_lei_organica: /EMENDA à LEI ORGâNICA/,
         lei_ordinaria: /LEI ORDINáRIA/,
-        resolucao: /RESOLUçãO/,
+        resolucao: /RESOLUÇÃO/,
         requerimento: /REQUERIMENTO/,
         mensagem_executivo: /MENSAGEM EXECUTIVO/,
         lei_complementar: /LEI COMPLEMENTAR/,

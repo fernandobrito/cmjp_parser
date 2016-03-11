@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Proposituras da Camâra de Vereadores de João Pessoa</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+
+    <!-- Custom Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" type="text/css">
+
+    <!-- Plugin CSS -->
+    <link rel="stylesheet" href="css/animate.min.css" type="text/css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/creative.css" type="text/css">
+
+    <link rel="stylesheet" href="css/charts.css" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body id="page-top">
+
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">Proposituras Câmara JP</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a class="page-scroll" href="#proposals">Proposituras</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#petitions">Requerimentos</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#conclusion">Conclusão</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#credits">Créditos</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <header>
+        <div class="header-content">
+            <div class="header-content-inner">
+                <h1>Proposituras da Câmara Municipal de João Pessoa</h1>
+                <hr class="light">
+                <p>Uma breve análise das proposituras da Câmara Municipal de João Pessoa, desenvolvido durante evento de transparência de dados (<a href="http://opendataday.org/" target="_blank">Open Data Day 2016</a>), em João Pessoa, PB.</p>
+            </div>
+        </div>
+    </header>
+
+    <section class="bg-primary" id="proposals">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-8 col-xs-offset-2 text-center">
+                    <h2 class="section-heading">Tipos de proposituras</h2>
+                    <hr class="light">
+                    <p class="text-faded">Segundo o SAPL (Sistema de Apoio ao Processo Legislativo), sistema utilizado na Câmara Municipal de João Pessoa, houve um total de 8.023 matérias discutidas na casa em 2015 <a href="http://177.200.32.195:9673/sapl/relatorios_administrativos/propositurasAnoAutorTipo/view?ano=2015" target="_blank">(fonte)</a>.</p>
+
+                    <p class="text-faded">O mesmo sistema descrimina estas matérias em diversas categorias. A categoria predominante é "Requerimento", com 7.277 matérias no período, equivalente a mais de 90% do total das matérias. A quantidade relativa de cada categoria em relação ao todo pode ser vista no gráfico abaixo.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div id="chart-1-percentage" class="chart" style="height:400px;"></div> 
+        </div>
+    </section>
+
+    <section class="bg-green" id="petitions">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-8 col-xs-offset-2 text-center">
+                    <h2 class="section-heading white-text">Tipos de requerimentos</h2>
+                    <hr class="light">
+                    <p class="text-faded">Com o objetivo de melhor entender quais tipos de requerimentos são debatidos na Câmara Municipal de João Pessoa, analizamos manualmente centenas de títulos de requerimentos e encontramos palavras-chave com alto índice de ocorrência. A partir destas palavras-chave, criamos categorias e classificamos automaticamente os requerimentos de acordo com a presença destas palavras em seus títulos. As palavras-chave e regras utilizadas podem ser vistas neste <a href="https://github.com/fernandobrito/cmjp_parser/blob/master/lib/cmjp_parser/models/proposal.rb" target="_blank">arquivo técnico</a>.</p>
+
+                    <p class="text-faded">É importante observar as limitações do método que usamos. Tentamos utilizar palavras-chave relevantes e acreditamos que conseguimos um alto grau de confiança ao inserir um requerimento em uma categoria específica. Entretanto, é possível que nem todas as palavras-chave relevantes para uma categoria tenha sido cadastradas pela nossa equipe. Por este motivo, recomendos a leitura do gráfico abaixo da seguinte forma: <strong>pelo menos</strong> 49,5% dos requerimentos foram para a SEINFRA. Requerimentos que não foram categorizados e categorias com menos de 1% foram agrupadas.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div id="chart-2-percentage" class="chart" style="height:400px;"></div> 
+        </div>
+    </section>
+
+    <section class="bg-yellow" id="conclusion">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-8 col-xs-offset-2 text-center">
+                    <h2 class="section-heading white-text">Conclusão</h2>
+                    <hr class="light">
+                    <p class="text-faded">O objetivo deste trabalho não é tirar nenhuma conclusão a partir destes dados, e sim expô-los para futuras análises, comparações e interpretações de especialistas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="credits">
+        <div class="container">
+            <div class="col-xs-8 col-xs-offset-2 text-center">
+                <h2 class="section-heading">Créditos</h2>
+                <hr class="primary">
+            </div>
+
+            <div class="row">
+                <div class="col-xs-1 col-xs-offset-2 text-center">
+                    <i class="fa fa-users fa-3x wow bounceIn"></i>
+                </div>
+                <div class="col-xs-6">
+                    <p>Desenvolvido por <a href="https://github.com/fernandobrito" target="_blank">Fernando Brito</a>, <a href="https://github.com/davidguilherme" target="_blank">David Guilherme</a> e <a href="https://github.com/jcarva" target="_blank">Jaelson Carvalho</a> durante o Open Data Day 2016, em João Pessoa, PB.</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-1 col-xs-offset-2 text-center">
+                    <i class="fa fa-code-fork fa-3x wow bounceIn" data-wow-delay=".3s"></i>
+                </div>
+                <div class="col-xs-6">
+                    <p>Código fonte: <a href="https://github.com/fernandobrito/cmjp_parser" target="_blank">Github</a></p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-1 col-xs-offset-2 text-center">
+                    <i class="fa fa-database fa-3x wow bounceIn" data-wow-delay=".6s"></i>
+                </div>
+                <div class="col-xs-6">
+                    <p>Fonte dos dados: <a href="http://177.200.32.195:9673/sapl/default_index_html" target="_blank">SAPL - Câmara Municipal de João Pessoa</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/jquery.fittext.js"></script>
+    <script src="js/wow.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/creative.js"></script>
+
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/data.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highcharts/4.2.3/themes/grid-light.js"></script>
+    
+    <script src="js/chart-1-percentage.js"></script>
+    <script src="js/chart-2-percentage.js"></script>
+
+
+    <script>
+    $(function () {
+        stacked_relative('#chart-percent', 'percent');
+        stacked_relative('#chart-absolute', 'normal');
+    });
+    </script>
+</body>
+
+</html>

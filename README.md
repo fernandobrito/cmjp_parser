@@ -2,6 +2,8 @@
 
 **Weekend, hackaton project. Use at your own risk. No test coverage.**
 
+**Developed during the [Open Data Day 2016](http://opendataday.org), in João Pessoa, Brazil**
+
 Scraper and parser for João Pessoas's City Council (Câmara Municipal de João Pessoa).
 
 * João Pessoa's City Council webiste: http://cmjp.pb.gov.br/
